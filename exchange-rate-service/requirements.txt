@@ -1,0 +1,12 @@
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.7
+alembic==1.12.1
+pydantic[email]==2.5.0
+pydantic-settings==2.0.3
+httpx==0.25.2
+redis==5.0.1
+python-dotenv==1.0.0
+asyncio-mqtt==0.11.1
+celery[redis]==5.4.0

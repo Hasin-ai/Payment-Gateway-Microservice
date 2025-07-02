@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Completed - Payment Gateway</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f5f5f5; }
+        .container { max-width: 600px; margin: 0 auto; background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { background-color: #38a169; color: white; padding: 20px; text-align: center; }
+        .content { padding: 30px; }
+        .success-icon { font-size: 48px; text-align: center; margin: 20px 0; }
+        .transaction-details { background-color: #f0fff4; padding: 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #38a169; }
+        .detail-row { display: flex; justify-content: space-between; margin: 10px 0; }
+        .label { font-weight: bold; color: #4a5568; }
+        .value { color: #2d3748; }
+        .amount { font-size: 1.2em; font-weight: bold; color: #38a169; }
+        .footer { background-color: #edf2f7; padding: 20px; text-align: center; font-size: 0.9em; color: #718096; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Payment Completed Successfully! 🎉</h1>
+        </div>
+        <div class="content">
+            <div class="success-icon">✅</div>
+            
+            <p>Dear {{ user_name }},</p>
+            
+            <p>Great news! Your international payment has been completed successfully.</p>
+            
+            <div class="transaction-details">
+                <div class="detail-row">
+                    <span class="label">Transaction ID:</span>
+                    <span class="value">{{ transaction_id }}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Recipient:</span>
+                    <span class="value">{{ recipient_email }}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Amount Sent:</span>
+                    <span class="value amount">{{ foreign_amount }}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">PayPal Transaction ID:</span>
+                    <span class="value">{{ paypal_transaction_id }}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Completed At:</span>
+                    <span class="value">{{ completion_time }}</span>
+                </div>
+            </div>
+            
+            <p>Your recipient should receive the payment in their PayPal account shortly.</p>
+            
+            <p>Thank you for using our international payment service!</p>
+        </div>
+        <div class="footer">
+            <p>Payment Gateway - Secure International Transfers</p>
+            <p>Keep this email for your records.</p>
+        </div>
+    </div>
+</body>
+</html>
